@@ -1,17 +1,19 @@
-<script type="ts"></script>
+<script type="ts">
+  // TODO: Hardcoded scaffolding below. Needs refactor for expansion.
+  const particleCount = 4
+</script>
 
 <div class="particle-wrapper">
-  <div class="particle particle-1"></div>
-  <div class="particle particle-2"></div>
-  <div class="particle particle-3"></div>
-  <div class="particle particle-4"></div>
+  {#each Array(particleCount) as _, i}
+    <div class="particle particle-{i}"></div>
+  {/each}
 </div>
 
 <style lang="scss">
   @import '../styles/colors';
 
   $color-particle: $dark;
-  $spacing: 1200px;
+  $spacing: 1600px;
   $time-1: 20s;
   $time-2: 30s;
   $time-3: 60s;
@@ -20,7 +22,8 @@
   $particle-2-count: 50;
   $particle-3-count: 25;
   $particle-4-count: 10;
-  // Particle Mixin
+
+  // Space, anim, randomness (you know, particles)
   @function particles($max) {
     $val: 0px 0px $color-particle;
     @for $i from 1 through $max {
@@ -125,13 +128,13 @@
       transform: translateY($spacing * -0.5) translateX(0px);
     }
     25% {
-      transform: translateY($spacing * -0.1) translateX(-25vw);
+      transform: translateY($spacing * -0.2) translateX(-25vw);
     }
     50% {
       transform: translateY(0px) translateX(0px);
     }
     75% {
-      transform: translateY($spacing * -0.4) translateX(25vw);
+      transform: translateY($spacing * -0.3) translateX(25vw);
     }
     100% {
       transform: translateY($spacing * -0.5) translateX(0px);

@@ -3,7 +3,7 @@ import App from './App.svelte'
 const app = new App({
   target: document.body,
   props: {
-    name: 'Wedington Photography'
+    // TODO: Will use a better state management util for this
   }
 })
 
