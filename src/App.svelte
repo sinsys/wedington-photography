@@ -1,16 +1,16 @@
 <script lang="ts">
-	import Viewport from './components/Viewport.svelte';
+  import Viewport from './components/Viewport.svelte'
 </script>
 
 <main>
-	<Viewport />
+  <Viewport />
 </main>
 
-<style type="scss">
-	@import './styles/base';
-	main {
-		@include page;
-		background: $baseBlue;
-		color: $light;
-	}
+<style lang="scss">
+  @import './styles/base';
+  main {
+    @include page;
+    background-color: $baseBlue;
+    color: $light;
+  }
 </style>
