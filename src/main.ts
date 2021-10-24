@@ -1,10 +1,10 @@
-import App from './App.svelte';
+import App from './App.svelte'
 
 const app = new App({
-	target: document.body,
-	props: {
-		name: 'Wedington Photography'
-	}
-});
+  target: document.body,
+  props: {
+    name: 'Wedington Photography'
+  }
+})
 
-export default app;
+export default app
