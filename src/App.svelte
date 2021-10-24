@@ -10,7 +10,7 @@
   @import './styles/base';
   main {
     @include page;
-    background-color: $baseBlue;
+    @include fontWorkSans;
     color: $light;
   }
 </style>
