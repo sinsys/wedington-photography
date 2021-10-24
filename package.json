@@ -40,9 +40,14 @@
     "page": "^1.11.6",
     "sirv-cli": "^1.0.0"
   },
+  "lint-staged": {
+    "src/**/*.{js,ts,svelte}": [
+      "npm run lint:fix", "git add"
+    ]
+  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint:fix"
+      "pre-commit": "lint-staged"
     }
   }
 }
